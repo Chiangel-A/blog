@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %}
+
+<title>{{header}}</title>
+
+{% endblock %}
+
+{% block body_block %}
+				{% for post in titles %}
+				<div class="card">
+				
+					<h1>{{post.title}}</h1>
+					<small>published {{post.published}} in {{post.category.name}} by {{post.author}}</small>
+					<p>{{post.body|truncatewords:10}}....<a href="{% url 'singlepost' post.id %}">Read more</a></p>
+				
+				</div>
+				{%endfor%}
+			
+{% endblock %}

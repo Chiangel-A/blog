@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="{% static 'cspage.css' %}">
+		
+		{% block title %}This is the title default content {% endblock %}
+	
+	</head>
+
+	<body>
+		<div class="header">
+			<h2> A2B Blog</h2>
+		</div>
+		
+
+		<div class="row">
+			<div class="leftcolumn">
+			{% block body_block %}This is body block default content {% endblock %}
+				
+			</div>
+			
+		
+
+		
+		<div class="rightcolumn">
+				
+				<div class="card">
+					<h3>Featured Post</h3>
+						<div class="fakeimg"><a href="#first">My first post</a></div><br>
+						<div class="fakeimg"><a href="#journey">Python Journey</a></div><br>
+      
+				</div>
+				<div class="card">
+					<h3>Follow</h3>
+					<p><a href="#">facebook</a></p>
+					<p><a href="#">Instablog</a></p>
+					<p><a href="#">LinkedIn</a></p>
+					<p><a href="#">Twitter</a></p>
+				</div>
+		</div>
+	</div>
+
+		<div class="footer">
+					<h2>Blog site | designed by Angela Onyegbuna | 2019</h2>
+		</div>
+
+		
+
+	</body>
+</html>
